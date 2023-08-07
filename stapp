@@ -33,7 +33,8 @@ with input_container:
 # Response output
 ## Function for taking user prompt as input followed by producing AI generated responses
 def generate_response(prompt):
-    chatbot = hugchat.ChatBot(cookie_path="cookies.json")
+#    chatbot = hugchat.ChatBot(cookie_path="cookies.json")
+    chatbot = hugchat.ChatBot(cookie_path = st.secrets['cookies_json_path'])
     response = chatbot.chat(prompt)
     return response
 
